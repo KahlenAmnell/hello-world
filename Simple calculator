@@ -1,0 +1,61 @@
+
+print("Hi! Welcome to this simple calculator!\n"
+      "Menu:\n"
+      "+ - addition\n"
+      "- - substraction\n"
+      "* - multiplication\n"
+      "/ - division\n"
+      "q - quit\n")
+
+commend = 0
+
+while commend != "q":
+    commend = input("Enter a sign to choose your action: ")
+    if commend == "+":
+        choice = input("You choose addition, do you want to continue? \nPrint 'y' for yes or 'n' if not\n")
+        if choice == "y":
+            firstDigit = int(input("Enter firts digit: "))
+            secondDigit = int(input("Enter second digit: "))
+            print("Your result is: ", (firstDigit + secondDigit))
+        elif choice == "n":
+            continue
+        else:
+            print("You write wrong commend, please try again :) ")
+    elif commend == "-":
+        choice = input("You choose substraction, do you want to continue? \nPrint 'y' for yes or 'n' if not\n")
+        if choice == "y":
+            firstDigit = int(input("Enter firts digit: "))
+            secondDigit = int(input("Enter second digit: "))
+            print("Your result is: ", (firstDigit - secondDigit))
+        elif choice == "n":
+            continue
+        else:
+            print("You write wrong commend, please try again :) ")
+    elif commend == "*":
+        choice = input("You choose multiplication, do you want to continue? \nPrint 'y' for yes or 'n' if not\n")
+        if choice == "y":
+            firstDigit = int(input("Enter firts digit: "))
+            secondDigit = int(input("Enter second digit: "))
+            print("Your result is: ", (firstDigit * secondDigit))
+        elif choice == "n":
+            continue
+        else:
+            print("You write wrong commend, please try again :) ")
+    elif commend == "/":
+        choice = input("You choose division, do you want to continue? \nPrint 'y' for yes or 'n' if not\n")
+        if choice == "y":
+            print("Remember not to divide by 0 ;)")
+            firstDigit = int(input("Enter firts digit: "))
+            secondDigit = int(input("Enter second digit: "))
+            if secondDigit == 0:
+                print("I told you not to divide by 0! You're dumb! This program will not work for you!")
+                break
+            print("Your result is: ", (firstDigit / secondDigit))
+        elif choice == "n":
+            continue
+        else:
+            print("You write wrong commend, please try again :) ")
+    elif commend == "q":
+        print("Thank you for using my simple calculator.\nBye, bye :)")
+    else:
+        print("You write wrong commend, please try again :) ")
